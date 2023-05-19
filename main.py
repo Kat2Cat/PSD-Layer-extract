@@ -5,8 +5,9 @@ import os
 src = input("Folder Location: ")
 dirpath = Path(src)
 
+Counter = 1
 def extract_layers(psd):
-    Counter = 1
+    global Counter
     for layer in psd:
         if layer.name == '背景':
             layer_image = layer.composite()
